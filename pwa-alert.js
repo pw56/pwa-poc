@@ -1,5 +1,6 @@
 // 1. 今「ブラウザ」で開いている場合のみ処理を実行
 const isBrowser = !window.matchMedia('(display-mode: standalone)').matches;
+alert(isBrowser);
 
 if (isBrowser) {
   initPwaGuide();
