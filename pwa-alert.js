@@ -20,11 +20,8 @@ async function initPwaGuide() {
   
   // --- iOSの場合 ---
   else if (isIOS) {
-    // 過去にアプリ追加のアクション（ボタンクリック等）をしたか確認
-    const hasInstalledFlag = localStorage.getItem('pwa_installed_flag') === 'true';
-    if (hasInstalledFlag) {
-      showGuideBanner('ios-installed');
-    }
+    // めんどくさいので無条件
+    showGuideBanner('ios-installed');
   }
 }
 
@@ -38,7 +35,6 @@ function showGuideBanner(type) {
     message = "【アプリ版が登録済です】<br>このサイトはアプリとしてホーム画面に追加されています。<strong>ホーム画面のアイコン</strong>から起動してください。";
   }
 
-  // 画面上部にバナーを生成して表示
   const banner = document.createElement('div');
   banner.style.cssText = "position:fixed; top:0; left:0; width:100%; background:#1a1a1a; color:#fff; padding:15px; text-align:center; font-size:14px; z-index:9999; box-shadow:0 2px 10px rgba(0,0,0,0.3); line-height:1.5;";
   banner.innerHTML = message;
