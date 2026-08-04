@@ -1,9 +1,11 @@
-// 1. 今「ブラウザ」で開いている場合のみ処理を実行
-const isBrowser = !window.matchMedia('(display-mode: standalone)').matches;
-
-if (isBrowser) {
-  initPwaGuide();
-}
+window.addEventListener('DOMContentLoaded', () => {
+  // 1. 今「ブラウザ」で開いている場合のみ処理を実行
+  const isBrowser = !window.matchMedia('(display-mode: standalone)').matches;
+  
+  if (isBrowser) {
+    initPwaGuide();
+  }
+});
 
 async function initPwaGuide() {
   const ua = navigator.userAgent.toLowerCase();
