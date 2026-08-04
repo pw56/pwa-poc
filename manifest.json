@@ -11,5 +11,12 @@
   "start_url": "./index.html",
   "background_color": "#3367D6",
   "theme_color": "#ff00b3",
-  "display": "standalone"
+  "display": "standalone",
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://pw56.github.io/pwa-poc/manifest.json"
+    }
+  ],
+  "prefer_related_applications": true
 }
