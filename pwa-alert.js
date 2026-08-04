@@ -41,5 +41,5 @@ function showGuideBanner(type) {
   banner.innerHTML = message;
   
   // 閉じるボタンなどをつけると親切です
-  document.body.prepend(banner);
+  document.body.appendChild(banner);
 }
